@@ -42,6 +42,8 @@ import com.google.android.libraries.places.widget.AutocompleteActivity;
 import com.google.android.libraries.places.widget.model.AutocompleteActivityMode;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.textfield.TextInputEditText;
+import com.lambton.fa_ishara_c0852812_android.db.DatabaseClient;
+import com.lambton.fa_ishara_c0852812_android.db.entities.AddExpense;
 
 
 import java.util.Arrays;
@@ -159,6 +161,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void showMapTypeDialog() {
         Dialog alertDialog = new Dialog(MapsActivity.this);
+        ;
         View view = getLayoutInflater().inflate(R.layout.dialog_layout, null);
 
         TextView mHybrid = view.findViewById(R.id.mHybrid);

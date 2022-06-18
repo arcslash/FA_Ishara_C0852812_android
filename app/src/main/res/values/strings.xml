@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">FA_Ishara_C0852812_android</string>
     <string name="google_maps_key">AIzaSyCb6mHsu4ph9RCL6a8SucpVhhbcuzh_Jzo</string>
+    <string name="title_activity_maps">Main Map</string>
+    <string name="title_activity_fav_maps">Favourite Locations</string>
+    <string name="mark_as_visited"><u>Mark As Visited</u></string>
+    <string name="get_directions"><u>Get Directions</u></string>
+    <string name="get_distance"><u>Get Distance</u></string>
+    <string name="get_nearby_restro_bars_cafe"><u>Get Nearby Resturants,Bars, Cafes</u></string>
 </resources>

@@ -14,6 +14,7 @@ import androidx.core.app.ActivityCompat;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
@@ -24,14 +25,14 @@ public class SplashActivity extends AppCompatActivity {
     FusedLocationProviderClient fusedLocationProviderClient;
     private static final int REQUEST_CODE = 101;
 
-    SharedPreference sharedPreference;
+    com.lambton.fa_ishara_c0852812_android.SharedPreference sharedPreference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        sharedPreference=new SharedPreference(SplashActivity.this);
+        sharedPreference=new com.lambton.fa_ishara_c0852812_android.SharedPreference(SplashActivity.this);
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         fetchLocation();
@@ -55,11 +56,11 @@ public class SplashActivity extends AppCompatActivity {
 
                         @Override
                         public void run() {
-                            Intent i = new Intent(SplashActivity.this, MapsActivity.class);
+                            Intent i = new Intent(SplashActivity.this,com.lambton.fa_ishara_c0852812_android.MapsActivity.class);
                             i.putExtra("Lat",currentLocation.getLatitude());
                             i.putExtra("Lng",currentLocation.getLongitude());
-                            SharedPreference.setLatitude(String.valueOf(currentLocation.getLatitude()));
-                            SharedPreference.setLongitude(String.valueOf(currentLocation.getLongitude()));
+                            com.lambton.fa_ishara_c0852812_android.SharedPreference.setLatitude(String.valueOf(currentLocation.getLatitude()));
+                            com.lambton.fa_ishara_c0852812_android.SharedPreference.setLongitude(String.valueOf(currentLocation.getLongitude()));
                             startActivity(i);
                             finish();
                         }
