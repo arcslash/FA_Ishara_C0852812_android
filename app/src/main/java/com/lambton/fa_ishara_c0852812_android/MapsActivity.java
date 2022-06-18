@@ -1,9 +1,7 @@
-package com.project.finalexam;
+package com.lambton.fa_ishara_c0852812_android;
 
-import android.Manifest;
 import android.app.Dialog;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -23,7 +21,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentActivity;
 
@@ -38,8 +35,6 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.libraries.places.api.Places;
 import com.google.android.libraries.places.api.model.Place;
 import com.google.android.libraries.places.widget.Autocomplete;
@@ -47,8 +42,7 @@ import com.google.android.libraries.places.widget.AutocompleteActivity;
 import com.google.android.libraries.places.widget.model.AutocompleteActivityMode;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.textfield.TextInputEditText;
-import com.project.finalexam.db.DatabaseClient;
-import com.project.finalexam.db.entities.AddExpense;
+
 
 import java.util.Arrays;
 import java.util.List;
@@ -165,7 +159,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void showMapTypeDialog() {
         Dialog alertDialog = new Dialog(MapsActivity.this);
-        ;
         View view = getLayoutInflater().inflate(R.layout.dialog_layout, null);
 
         TextView mHybrid = view.findViewById(R.id.mHybrid);
