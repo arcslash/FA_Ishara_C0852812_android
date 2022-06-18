@@ -130,30 +130,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
-        mMapTypeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showMapTypeDialog();
-            }
-        });
+        mMapTypeBtn.setOnClickListener(v -> showMapTypeDialog());
 
-        mCurrentLocationBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //fetchLocation();
+        mCurrentLocationBtn.setOnClickListener(v -> {
 
-                mMap.clear();
+            mMap.clear();
 
-                LatLng latLng = new LatLng(Double.parseDouble(SharedPreference.getLatitude()), Double.parseDouble(SharedPreference.getLongitude()));
-                MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("I am here!");
-                mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
-                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 5));
-                mMap.addMarker(markerOptions);
+            LatLng latLng = new LatLng(Double.parseDouble(SharedPreference.getLatitude()), Double.parseDouble(SharedPreference.getLongitude()));
+            MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("I am here!");
+            mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 5));
+            mMap.addMarker(markerOptions);
 
-                mAddressEt.invalidate();
-                mAddressEt.setText(getCompleteAddressString(Double.parseDouble(SharedPreference.getLatitude()), Double.parseDouble(SharedPreference.getLongitude())));
+            mAddressEt.invalidate();
+            mAddressEt.setText(getCompleteAddressString(Double.parseDouble(SharedPreference.getLatitude()), Double.parseDouble(SharedPreference.getLongitude())));
 
-            }
         });
     }
 

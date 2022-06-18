@@ -431,6 +431,7 @@ public class FavMapsActivity extends FragmentActivity implements OnMapReadyCallb
 
                 // Placing a marker on the touched position
                 Marker m = mMap.addMarker(markerOptions);
+                Log.d("Marker", "Marker Added" + m.getTitle());
 
             }
         }
