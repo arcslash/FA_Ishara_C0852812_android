@@ -103,7 +103,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.myMap);
         mapFragment.getMapAsync(this);
@@ -170,45 +169,30 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         TextView mRoadmap = view.findViewById(R.id.mRoadmap);
         TextView mNone = view.findViewById(R.id.mNone);
 
-        mHybrid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-                alertDialog.dismiss();
-            }
+        mHybrid.setOnClickListener(v -> {
+            mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+            alertDialog.dismiss();
         });
 
-        mTerrain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
-                alertDialog.dismiss();
-            }
+        mTerrain.setOnClickListener(v -> {
+            mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+            alertDialog.dismiss();
         });
 
-        mSatellite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-                alertDialog.dismiss();
-            }
+        mSatellite.setOnClickListener(v -> {
+            mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+            alertDialog.dismiss();
         });
 
-        mRoadmap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                alertDialog.dismiss();
+        mRoadmap.setOnClickListener(v -> {
+            mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+            alertDialog.dismiss();
 
-            }
         });
-        mNone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
-                alertDialog.dismiss();
+        mNone.setOnClickListener(v -> {
+            mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
+            alertDialog.dismiss();
 
-            }
         });
 
 

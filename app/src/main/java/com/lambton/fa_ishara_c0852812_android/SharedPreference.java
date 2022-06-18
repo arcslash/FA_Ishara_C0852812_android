@@ -15,9 +15,6 @@ public class SharedPreference {
         editor = mPref.edit();
     }
 
-
-
-
     public static String getLatitude() {
         return mPref.getString("LATITUDE", "");
     }
@@ -37,8 +34,4 @@ public class SharedPreference {
         editor2.putString("LONGITUDE", status);
         editor2.apply();
     }
-
-
-
-
 }
