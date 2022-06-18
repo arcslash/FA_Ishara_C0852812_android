@@ -55,6 +55,13 @@ public class SplashActivity extends AppCompatActivity {
 
                         @Override
                         public void run() {
+                            Intent i = new Intent(SplashActivity.this, MapsActivity.class);
+                            i.putExtra("Lat",currentLocation.getLatitude());
+                            i.putExtra("Lng",currentLocation.getLongitude());
+                            SharedPreference.setLatitude(String.valueOf(currentLocation.getLatitude()));
+                            SharedPreference.setLongitude(String.valueOf(currentLocation.getLongitude()));
+                            startActivity(i);
+                            finish();
                         }
                     }, SPLASH_TIME_OUT);
 
