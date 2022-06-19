@@ -7,11 +7,13 @@
         <entry key="app/src/main/res/drawable/edit_text_bg_filled.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/edit_text_selector.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_address.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_menu.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_nodatafound.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_fav_maps.xml" value="0.15625" />
+        <entry key="app/src/main/res/layout/activity_favourite.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22056159420289856" />
-        <entry key="app/src/main/res/layout/activity_maps.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_maps.xml" value="0.23016510009765626" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.15625" />
         <entry key="app/src/main/res/layout/dialog_layout.xml" value="0.15625" />
         <entry key="app/src/main/res/layout/nav_header_home.xml" value="0.15625" />

@@ -7,4 +7,5 @@
     <string name="get_directions"><u>Get Directions</u></string>
     <string name="get_distance"><u>Get Distance</u></string>
     <string name="get_nearby_restro_bars_cafe"><u>Get Nearby Resturants,Bars, Cafes</u></string>
+    <string name="travel_logger">Travel Logger</string>
 </resources>

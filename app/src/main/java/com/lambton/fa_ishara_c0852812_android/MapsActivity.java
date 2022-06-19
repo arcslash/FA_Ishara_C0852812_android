@@ -303,7 +303,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if (id == R.id.nav_home) {
             recreate();
         } else if (id == R.id.nav_fav) {
-            startActivity(new Intent(MapsActivity.this,FavouriteActivity.class));
+            startActivity(new Intent(MapsActivity.this, FavouritesActivity.class));
 
         }
         mDrawerLayout.closeDrawer(Gravity.LEFT);

@@ -5,7 +5,6 @@
     android:layout_height="130dp"
     android:background="@android:color/white"
     android:orientation="vertical"
-    android:layout_marginTop="@dimen/_40sdp"
     android:weightSum="2">
 
     <LinearLayout
@@ -21,12 +20,12 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:gravity="center"
-                android:textColor="@android:color/black"
-                android:textSize="20dp"
-                android:text="Welcome"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/travel_logger"
+                android:textColor="@android:color/black"
+                android:textSize="20dp">
 
             </TextView>
 
@@ -41,7 +40,7 @@
 
 
     <View
-        android:background="#A9A9A9"
+        android:background="@color/primary"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_1sdp">
 

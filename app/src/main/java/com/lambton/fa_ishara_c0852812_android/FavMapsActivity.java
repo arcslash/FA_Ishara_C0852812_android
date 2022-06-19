@@ -153,7 +153,7 @@ public class FavMapsActivity extends FragmentActivity implements OnMapReadyCallb
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
                 Toast.makeText(FavMapsActivity.this, "UPDATED", Toast.LENGTH_LONG).show();
-                startActivity(new Intent(FavMapsActivity.this,FavouriteActivity.class));
+                startActivity(new Intent(FavMapsActivity.this, FavouritesActivity.class));
                 finish();
             }
         }
@@ -434,6 +434,8 @@ public class FavMapsActivity extends FragmentActivity implements OnMapReadyCallb
                 Log.d("Marker", "Marker Added" + m.getTitle());
 
             }
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(Double.parseDouble(list.get(0).get("lat")),
+                    Double.parseDouble(list.get(0).get("lng"))), 15));
         }
     }
 

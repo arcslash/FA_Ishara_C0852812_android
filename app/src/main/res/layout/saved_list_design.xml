@@ -27,7 +27,7 @@
             android:layout_width="70dp"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:background="@android:color/holo_red_dark"
+            android:background="@android:color/holo_blue_dark"
             android:textColor="@android:color/white"
             android:text="Delete" />
     </LinearLayout>

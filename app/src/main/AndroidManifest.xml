@@ -25,7 +25,7 @@
             android:exported="false"
             android:label="@string/title_activity_fav_maps" />
         <activity
-            android:name=".FavouriteActivity"
+            android:name=".FavouritesActivity"
             android:exported="false" />
         <activity
             android:name=".MapsActivity"

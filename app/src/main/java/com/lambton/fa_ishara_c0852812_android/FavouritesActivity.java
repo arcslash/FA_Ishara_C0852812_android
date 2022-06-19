@@ -30,7 +30,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class FavouriteActivity extends AppCompatActivity {
+public class FavouritesActivity extends AppCompatActivity {
 
     @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
@@ -49,7 +49,7 @@ public class FavouriteActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(FavouriteActivity.this));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(FavouritesActivity.this));
 
         getSavedPlaces();
     }
@@ -60,7 +60,7 @@ public class FavouriteActivity extends AppCompatActivity {
             @Override
             protected List<AddExpense> doInBackground(Void... voids) {
                 ledgers = DatabaseClient
-                        .getInstance(FavouriteActivity.this)
+                        .getInstance(FavouritesActivity.this)
                         .getAppDatabase()
                         .addExpenseDao()
                         .getAll();
@@ -83,7 +83,7 @@ public class FavouriteActivity extends AppCompatActivity {
 
                     mRecyclerView.setVisibility(View.VISIBLE);
                     noDataLl.setVisibility(View.GONE);
-                    ledgerAdapter = new LedgerAdapter(FavouriteActivity.this, ledgers);
+                    ledgerAdapter = new LedgerAdapter(FavouritesActivity.this, ledgers);
                     Log.e("List", ledgers + "");
                     mRecyclerView.setAdapter(ledgerAdapter);
                 }
@@ -103,7 +103,7 @@ public class FavouriteActivity extends AppCompatActivity {
             @Override
             protected Void doInBackground(Void... voids) {
 
-                final AppDatabase appDatabase = DatabaseClient.getInstance(FavouriteActivity.this).getAppDatabase();
+                final AppDatabase appDatabase = DatabaseClient.getInstance(FavouritesActivity.this).getAppDatabase();
                 appDatabase.runInTransaction(new Runnable() {
                     @Override
                     public void run() {
@@ -172,7 +172,7 @@ public class FavouriteActivity extends AppCompatActivity {
             holder.mEditTv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent=new Intent(FavouriteActivity.this, com.lambton.fa_ishara_c0852812_android.FavMapsActivity.class);
+                    Intent intent=new Intent(FavouritesActivity.this, com.lambton.fa_ishara_c0852812_android.FavMapsActivity.class);
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("OBJ", ledger);
                     intent.putExtras(bundle);
@@ -195,7 +195,7 @@ public class FavouriteActivity extends AppCompatActivity {
             holder.mDistanceTv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent=new Intent(FavouriteActivity.this, com.lambton.fa_ishara_c0852812_android.FavMapsActivity.class);
+                    Intent intent=new Intent(FavouritesActivity.this, com.lambton.fa_ishara_c0852812_android.FavMapsActivity.class);
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("OBJ", ledger);
                     intent.putExtras(bundle);
@@ -205,7 +205,7 @@ public class FavouriteActivity extends AppCompatActivity {
             });holder.mRestroTv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent=new Intent(FavouriteActivity.this, com.lambton.fa_ishara_c0852812_android.FavMapsActivity.class);
+                    Intent intent=new Intent(FavouritesActivity.this, com.lambton.fa_ishara_c0852812_android.FavMapsActivity.class);
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("OBJ", ledger);
                     intent.putExtras(bundle);
@@ -271,7 +271,7 @@ public class FavouriteActivity extends AppCompatActivity {
                 ledger.setIsVisited("true");
 
                 //adding to database
-                DatabaseClient.getInstance(FavouriteActivity.this).getAppDatabase()
+                DatabaseClient.getInstance(FavouritesActivity.this).getAppDatabase()
                         .addExpenseDao()
                         .update(ledger);
                 return null;
@@ -281,7 +281,7 @@ public class FavouriteActivity extends AppCompatActivity {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                Toast.makeText(FavouriteActivity.this, "Status Changed", Toast.LENGTH_LONG).show();
+                Toast.makeText(FavouritesActivity.this, "Status Changed", Toast.LENGTH_LONG).show();
                 getSavedPlaces();
             }
         }
