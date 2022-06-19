@@ -2,12 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/mHybrid"
         android:padding="@dimen/_7sdp"
-        android:textColor="@android:color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:text="TYPE HYBRID"
         android:layout_width="match_parent"
@@ -17,7 +18,7 @@
     <TextView
         android:id="@+id/mTerrain"
         android:padding="@dimen/_7sdp"
-        android:textColor="@android:color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:text="TYPE TERRAIN"
         android:layout_width="match_parent"
@@ -27,7 +28,7 @@
     <TextView
         android:id="@+id/mSatellite"
         android:padding="@dimen/_7sdp"
-        android:textColor="@android:color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:text="TYPE SATELLITE"
         android:layout_width="match_parent"
@@ -37,7 +38,7 @@
     <TextView
         android:id="@+id/mRoadmap"
         android:padding="@dimen/_7sdp"
-        android:textColor="@android:color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:text="TYPE NORMAL"
         android:layout_width="match_parent"
@@ -48,7 +49,7 @@
     <TextView
         android:id="@+id/mNone"
         android:padding="@dimen/_7sdp"
-        android:textColor="@android:color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:text="TYPE NONE"
         android:layout_width="match_parent"

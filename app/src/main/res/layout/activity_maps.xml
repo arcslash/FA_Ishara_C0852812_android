@@ -47,9 +47,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="@dimen/_5sdp"
-                        android:layout_marginTop="3dp"
-                        android:text="Final Exam"
-                        android:textAlignment="center"
+                        android:text="Travel Logger"
                         android:textColor="@color/white"
                         android:textSize="20sp" />
 

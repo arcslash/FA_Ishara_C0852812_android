@@ -49,7 +49,7 @@ public class SplashActivity extends AppCompatActivity {
         task.addOnSuccessListener(location -> {
             if (location != null) {
                 currentLocation = location;
-                Toast.makeText(getApplicationContext(), currentLocation.getLatitude() + "" + currentLocation.getLongitude(), Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getApplicationContext(), currentLocation.getLatitude() + "" + currentLocation.getLongitude(), Toast.LENGTH_SHORT).show();
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
