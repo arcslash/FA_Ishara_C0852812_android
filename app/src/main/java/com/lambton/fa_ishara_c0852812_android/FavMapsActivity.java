@@ -367,6 +367,7 @@ public class FavMapsActivity extends FragmentActivity implements OnMapReadyCallb
     }
 
 
+
     private class ParserTask extends AsyncTask<String, Integer, List<HashMap<String, String>>> {
 
         JSONObject jObject;
